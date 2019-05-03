@@ -1,4 +1,4 @@
-# Teste admicional ShopBack - Front-End:
+# Teste admissional ShopBack - Front-End:
 
 [![N|Solid](https://www.linx.com.br/app/uploads/2018/11/linx-impulse_maior.png)](https://www.linx.com.br/transformacao-digital/linx-impulse/)
 
