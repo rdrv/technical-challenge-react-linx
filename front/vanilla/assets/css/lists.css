@@ -1,0 +1,37 @@
+.features {
+    list-style: none;
+}
+
+.features li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features-text {
+    width: 20%;
+    word-break: break-all;
+}
+
+.features-bar-container {
+    width: 50%;
+    height: 3px;
+    position: relative;
+}
+
+.features-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.description-list li {
+    text-indent: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}

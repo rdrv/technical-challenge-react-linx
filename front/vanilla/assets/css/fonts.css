@@ -17,3 +17,11 @@ html, body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600 !important;
 }
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-11px {
+    font-size: 11px;
+}

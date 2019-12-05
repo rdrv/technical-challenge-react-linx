@@ -14,4 +14,10 @@ body {
     max-width: 375px;
     max-height: 812px;
     position: relative;
+    overflow: hidden;
+}
+
+.details-section {
+    height: 70%;
+    overflow: scroll;
 }

@@ -29,7 +29,11 @@
 /* details */
 
 .details-text-color {
-    background-color: #D1D1D1;
+    color: #D1D1D1;
+}
+
+.details-bar-bg-color {
+    background-color: #284153;
 }
 
 /* bullets */

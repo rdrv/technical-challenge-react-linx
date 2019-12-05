@@ -1,6 +1,14 @@
+/* default padding in px */
+
 .default-padding {
     padding: 10px;
 }
+
+.default-padding-right {
+    padding-right: 10px;
+}
+
+/* default padding in % */
 
 .default-padding-left-percent {
     padding-left: 10%;
@@ -10,6 +18,35 @@
     padding-right: 10%;
 }
 
+/* default margin in px */
+
 .default-margin {
     margin: 10px;
 }
+
+/* padding 30px */
+
+.padding-top-30px {
+    padding-top: 30px;
+}
+
+.padding-bottom-30px {
+    padding-bottom: 30px;
+}
+
+.padding-right-30px {
+    padding-right: 30px;
+}
+
+.padding-left-30px {
+    padding-left: 30px;
+}
+
+/* padding 145px */
+
+.details-spacing-custom {
+    margin-top: 145px;
+    padding-bottom: 300px;
+}
+
+

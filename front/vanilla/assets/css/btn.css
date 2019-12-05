@@ -7,6 +7,7 @@
     position: absolute;
     bottom: 2.5%;
     left: 7.5%;
+    z-index: 999;
     width: 85%;
     border: none;
     border-radius: 1000px;
