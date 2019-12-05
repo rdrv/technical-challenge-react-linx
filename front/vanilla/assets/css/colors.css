@@ -1,0 +1,54 @@
+/* black & white */
+
+.text-white-color {
+    color: #ffffff;
+}
+
+.bg-white-color {
+    background-color: #ffffff;
+}
+
+/* default colors */
+
+.default-bg-color {
+    background-color: #40596B;
+}
+
+.default-bg-gray-color {
+    background-color: #F2F2F2;
+}
+
+.default-bg-green-color {
+    background-color: #29BE66;
+}
+
+.default-text-green-color {
+    color: #29BE66;
+}
+
+/* details */
+
+.details-text-color {
+    background-color: #D1D1D1;
+}
+
+/* bullets */
+
+.bullet-active {
+    border: 1px solid #B9B9B9;
+}
+
+/* products */
+
+.product-bg-color-id-1 {
+    background-color: #1F3F7F;
+}
+
+.product-bg-color-id-2 {
+    background-color: #CBCBCB;
+}
+
+.product-bg-color-id-3 {
+    background-color: #C8E93C;
+}
+
