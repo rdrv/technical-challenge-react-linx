@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Teste admissional ShopBack - Front-End</title>
-    <!-- reset -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- main -->
+    <link rel="stylesheet" href="assets/css/setup.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap&subset=devanagari,latin-ext"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/fonts.css">
     <!-- colors -->
     <link rel="stylesheet" href="assets/css/colors.css">
-    <!-- grid -->
-    <link rel="stylesheet" href="assets/css/container.css">
-    <link rel="stylesheet" href="assets/css/margin-padding.css">
     <!-- components  -->
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/btn.css">
-    <link rel="stylesheet" href="assets/css/lists.css">
+    <link rel="stylesheet" href="assets/css/details.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
 
 </head>
 
@@ -27,6 +25,42 @@
 
     <main class="default-bg-color cellphone">
 
+        <section class="overlay-section-wrapper default-bg-gray-color padding-30px" data-animation="false">
+
+            <div class="overlay-section">
+
+                <div class="overlay-section-header padding-top-30px">
+                    <img src="assets/img/logo.svg" alt="">
+                    <h4>Bootle</h4>
+                    <img src="assets/img/cart-select.svg" alt="">
+                </div>
+
+                <div class="overlay-section-img-container">
+                    <div class="overlay-section-img-wrapper">
+                        <img id="0" src="assets/img/img1.png" alt="" class="overlay-section-img"
+                            onclick="showDetails(event)">
+                        <img id="1" src="assets/img/img2.png" alt="" class="overlay-section-img"
+                            onclick="showDetails(event)">
+                        <img id="2" src="assets/img/img3.png" alt="" class="overlay-section-img"
+                            onclick="showDetails(event)">
+                    </div>
+                    <ul class="overlay-section-img-bullets padding-bottom-30px">
+                        <li id="0" class="product-bg-color-id-1 bullet-active"></li>
+                        <li id="1" class="product-bg-color-id-2"></li>
+                        <li id="2" class="product-bg-color-id-3"></li>
+                    </ul>
+                </div>
+
+                <div class="overlay-section-info">
+                    <h2 class="overlay-section-info-title custom-font-semibold fs-23px">Nike Hyperfuel 709ml</h2>
+                    <h4 class="custom-font-medium fs-23px default-text-green-color">$24.99</h4>
+                    <p class="custom-font-regular fs-11px overlay-text-color">When you're carrying the Nike Hyperful
+                        Water Bottle there will be no ...</p>
+                </div>
+
+            </div>
+
+        </section>
 
         <section class="details-section padding-left-30px padding-right-30px details-spacing-custom">
 
@@ -54,19 +88,21 @@
                     <span class="features-text">300g</span>
                 </li>
             </ul>
-            <h3 class="text-white-color custom-font-medium fs-14px padding-bottom-30px padding-top-30px">Description</h3>
+            <h3 class="text-white-color custom-font-medium fs-14px padding-bottom-30px padding-top-30px">Description
+            </h3>
             <ul class="details-text-color fs-11px description-list">
                 <li>Leakproof Puff Valve Spout to avoid splatters and spills</li>
                 <li>BPA Free - Smaller carbon footprint!</li>
-                <li>Translucent body to track your consumption 
-                        throughout the day</li>
+                <li>Translucent body to track your consumption
+                    throughout the day</li>
             </ul>
-            <h3 class="text-white-color custom-font-medium fs-14px padding-bottom-30px padding-top-30px">Description</h3>
-            <p class="details-text-color fs-11px">When you're carrying the Nike Hyperful Water Bottle 
-                    there will be no second guessing your athletic ability. 
-                    Constructed with an anti-leak valve that helps to 
-                    prevent spills and provides easy hydration while 
-                    you're on the move.</p>
+            <h3 class="text-white-color custom-font-medium fs-14px padding-bottom-30px padding-top-30px">Description
+            </h3>
+            <p class="details-text-color fs-11px">When you're carrying the Nike Hyperful Water Bottle
+                there will be no second guessing your athletic ability.
+                Constructed with an anti-leak valve that helps to
+                prevent spills and provides easy hydration while
+                you're on the move.</p>
             <h3 class="text-white-color custom-font-medium fs-14px padding-bottom-30px padding-top-30px">Rating</h3>
             <div class="rating">
                 <img class="details-star default-padding-right" src="assets/img/star.svg" alt="">
@@ -91,5 +127,43 @@
     </main>
 
 </body>
+
+<script>
+
+
+    const showDetails = event => {
+
+        // getting elements
+        const overlayContainer = document.querySelector('.overlay-section-wrapper');
+        const overlayContainerAnimation = overlayContainer.getAttribute('data-animation');
+
+        const header = document.querySelector('.overlay-section-header');
+        const id = event.target.getAttribute('id');
+        const img = document.querySelectorAll('.overlay-section-img')[id];
+        const title = document.querySelector('.overlay-section-info-title');
+        const circleImg = document.querySelector('.overlay-section-img-bullets');
+        const detailsContainer = document.querySelector('.details-section');
+
+        if (overlayContainerAnimation === 'false') {
+            overlayContainer.setAttribute('data-animation', 'true');
+            overlayContainer.classList.add('overlay-section-wrapper-animation');
+            header.classList.add('overlay-section-header-animation');
+            img.classList.add('overlay-section-img-animation');
+            title.classList.add('overlay-section-info-title-animation');
+            circleImg.classList.add('overlay-section-img-bullets-animation');
+            detailsContainer.classList.add('details-section-animation');
+        } else {
+            overlayContainer.setAttribute('data-animation', 'false');
+            overlayContainer.classList.remove('overlay-section-wrapper-animation');
+            header.classList.remove('overlay-section-header-animation');
+            img.classList.remove('overlay-section-img-animation');
+            title.classList.remove('overlay-section-info-title-animation');
+            circleImg.classList.remove('overlay-section-img-bullets-animation');
+            detailsContainer.classList.remove('details-section-animation');
+        }
+
+    }
+
+</script>
 
 </html>

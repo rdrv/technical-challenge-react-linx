@@ -1,0 +1,142 @@
+/* main container */
+
+.overlay-section-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 85%;
+    min-height: 100px;
+    z-index: 999;
+    border-radius: 0 0 50px 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.overlay-section {
+    height: 100%;
+    overflow: scroll;
+}
+
+.overlay-section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* img container  */
+
+.overlay-section-img-wrapper {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.overlay-section-img {
+    max-width: 100%;
+    scroll-snap-align: center;
+}
+
+.overlay-section-img-bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.overlay-section-img-bullets::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 17%;
+    left: 13.5%;
+    width: 100%;
+    height: 100%;
+    background: url(../img/circle-imgs.png) no-repeat;
+}
+
+.overlay-section-img-bullets li {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.overlay-section-img-bullets li:last-child {
+    margin-right: 0;
+}
+
+.overlay-section-img-bullets .bullet-active::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+/* colors */
+
+.overlay-text-color {
+    color: #76848B;
+}
+
+.overlay-section-img-bullets .bullet-active::after {
+    border: 1px solid #B9B9B9;
+}
+
+.product-bg-color-id-1 {
+    background-color: #1F3F7F;
+}
+
+.product-bg-color-id-2 {
+    background-color: #CBCBCB;
+}
+
+.product-bg-color-id-3 {
+    background-color: #C8E93C;
+}
+
+/* animation */
+
+.overlay-section-wrapper,
+.overlay-section-img-wrapper,
+.overlay-section-header,
+.overlay-section-img,
+.overlay-section-info-title {
+    transition: all 1s;
+}
+
+.overlay-section-img-bullets {
+    transition: all .1s;
+}
+
+.overlay-section-wrapper-animation {
+    height: 12%;
+}
+
+.overlay-section-img-animation {
+    position: absolute;
+    z-index: 999;
+    transform: translate(-156px, -58%) scale(.125); 
+    transform-origin: center;
+    opacity: 1 !important;
+}
+
+.overlay-section-info-title-animation {
+    position: absolute;
+    z-index: 999;
+    transform: translate(30px, -1240%) scale(.75);
+}
+
+.overlay-section-img-bullets-animation {
+    opacity: 0;
+}
+
+.overlay-section-header-animation {
+    transform: translateY(-100%);
+}
+

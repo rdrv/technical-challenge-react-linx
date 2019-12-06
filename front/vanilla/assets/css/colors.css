@@ -26,33 +26,5 @@
     color: #29BE66;
 }
 
-/* details */
 
-.details-text-color {
-    color: #D1D1D1;
-}
-
-.details-bar-bg-color {
-    background-color: #284153;
-}
-
-/* bullets */
-
-.bullet-active {
-    border: 1px solid #B9B9B9;
-}
-
-/* products */
-
-.product-bg-color-id-1 {
-    background-color: #1F3F7F;
-}
-
-.product-bg-color-id-2 {
-    background-color: #CBCBCB;
-}
-
-.product-bg-color-id-3 {
-    background-color: #C8E93C;
-}
 

@@ -1,3 +1,16 @@
+/* container */
+
+.details-section {
+    height: 70%;
+    overflow: scroll;
+    margin-top: 145px;
+    padding-bottom: 145px;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+/* lists */
+
 .features {
     list-style: none;
 }
@@ -34,4 +47,20 @@
 .rating {
     display: flex;
     align-items: center;
+}
+
+/* colors */
+
+.details-text-color {
+    color: #D1D1D1;
+}
+
+.details-bar-bg-color {
+    background-color: #284153;
+}
+
+/* animation */
+
+.details-section-animation {
+    transform: translateX(0);
 }

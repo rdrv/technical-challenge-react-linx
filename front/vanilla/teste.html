@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste admissional ShopBack - Front-End</title>
+    <!-- main -->
+    <link rel="stylesheet" href="assets/css/setup.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap&subset=devanagari,latin-ext"
+        rel="stylesheet">
+    <!-- colors -->
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <!-- components  -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/btn.css">
+    <link rel="stylesheet" href="assets/css/details.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
+
+</head>
+
+<body>
+
+    <main class="default-bg-color cellphone">
+
+        <section class="overlay-section-wrapper default-bg-gray-color padding-30px">
+        </section>
+
+
+        <button class="btn default-bg-green-color default-padding-left-percent default-padding-right-percent">
+            <section class="btn-chat">
+                <img src="assets/img/chat.svg" alt="">
+                <span class="text-white-color custom-font-medium default-padding">Chat</span>
+            </section>
+            <section class="btn-add-cart">
+                <img src="assets/img/cart.svg" alt="">
+                <span class="text-white-color custom-font-medium default-padding">Add to cart</span>
+            </section>
+        </button>
+
+    </main>
+
+</body>
+
+<script>
+
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+    const btnChat = $('.btn-chat');
+    const btnAdd = $('.btn-add-cart');
+    const img = $('.overlay-section-wrapper');
+
+    btnChat.addEventListener('click', event => {
+        img.classList.add('teste');
+    });
+
+    btnAdd.addEventListener('click', event => {
+        img.classList.remove('teste');
+    });
+
+</script>
+
+</html>
