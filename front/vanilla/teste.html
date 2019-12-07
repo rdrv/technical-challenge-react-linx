@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="assets/css/btn.css">
     <link rel="stylesheet" href="assets/css/details.css">
     <link rel="stylesheet" href="assets/css/overlay.css">
+    <!-- slider -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 
 </head>
 
@@ -26,6 +29,34 @@
     <main class="default-bg-color cellphone">
 
         <section class="overlay-section-wrapper default-bg-gray-color padding-30px">
+
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img id="0" src="assets/img/img1.png" alt="" class="overlay-section-img"
+                                onclick="showDetails(event)">
+                        </li>
+                        <li class="glide__slide">
+                            <img id="1" src="assets/img/img2.png" alt="" class="overlay-section-img"
+                                onclick="showDetails(event)">
+                        </li>
+                        <li class="glide__slide">
+                            <img id="2" src="assets/img/img3.png" alt="" class="overlay-section-img"
+                                onclick="showDetails(event)">
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+
+
         </section>
 
 
@@ -44,23 +75,10 @@
 
 </body>
 
+<!-- slider -->
+<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 <script>
-
-    const $ = document.querySelector.bind(document);
-    const $$ = document.querySelectorAll.bind(document);
-
-    const btnChat = $('.btn-chat');
-    const btnAdd = $('.btn-add-cart');
-    const img = $('.overlay-section-wrapper');
-
-    btnChat.addEventListener('click', event => {
-        img.classList.add('teste');
-    });
-
-    btnAdd.addEventListener('click', event => {
-        img.classList.remove('teste');
-    });
-
+    new Glide('.glide').mount()
 </script>
 
 </html>

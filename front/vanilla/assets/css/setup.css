@@ -14,7 +14,7 @@
     background-color: transparent;
 }
 
-/* fonts */
+/* main fonts */
 
 html, body {
     font-family: 'Poppins', sans-serif;
@@ -62,14 +62,6 @@ html, body {
     background-color: #ffffff;
 }
 
-.default-bg-color {
-    background-color: #40596B;
-}
-
-.default-bg-gray-color {
-    background-color: #F2F2F2;
-}
-
 .default-bg-green-color {
     background-color: #29BE66;
 }
@@ -96,10 +88,6 @@ html, body {
     padding-right: 10%;
 }
 
-.default-margin {
-    margin: 10px;
-}
-
 .padding-30px {
     padding: 30px;
 }
@@ -120,6 +108,8 @@ html, body {
     padding-left: 30px;
 }
 
-/* opacity */
+.default-margin {
+    margin: 10px;
+}
 
 

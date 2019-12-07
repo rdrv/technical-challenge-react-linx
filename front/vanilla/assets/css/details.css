@@ -51,6 +51,10 @@
 
 /* colors */
 
+.details-bg-color {
+    background-color: #40596B;
+}
+
 .details-text-color {
     color: #D1D1D1;
 }

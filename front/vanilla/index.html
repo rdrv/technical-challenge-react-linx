@@ -11,21 +11,21 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap&subset=devanagari,latin-ext"
         rel="stylesheet">
-    <!-- colors -->
-    <link rel="stylesheet" href="assets/css/colors.css">
     <!-- components  -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/btn.css">
     <link rel="stylesheet" href="assets/css/details.css">
     <link rel="stylesheet" href="assets/css/overlay.css">
+    <!-- slider -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
 </head>
 
 <body>
 
-    <main class="default-bg-color cellphone">
+    <main class="details-bg-color cellphone">
 
-        <section class="overlay-section-wrapper default-bg-gray-color padding-30px" data-animation="false">
+        <section class="overlay-section-wrapper overlay-bg-gray-color padding-30px" data-animation-status="off">
 
             <div class="overlay-section">
 
@@ -35,26 +35,39 @@
                     <img src="assets/img/cart-select.svg" alt="">
                 </div>
 
-                <div class="overlay-section-img-container">
-                    <div class="overlay-section-img-wrapper">
-                        <img id="0" src="assets/img/img1.png" alt="" class="overlay-section-img"
-                            onclick="showDetails(event)">
-                        <img id="1" src="assets/img/img2.png" alt="" class="overlay-section-img"
-                            onclick="showDetails(event)">
-                        <img id="2" src="assets/img/img3.png" alt="" class="overlay-section-img"
-                            onclick="showDetails(event)">
+                <div class="glide">
+                    <span class="back-circle-effect"></span>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <img id="0" src="assets/img/img1.png" alt="" class="overlay-section-img"
+                                    onclick="showDetails(event)">
+                            </li>
+                            <li class="glide__slide">
+                                <img id="1" src="assets/img/img2.png" alt="" class="overlay-section-img"
+                                    onclick="showDetails(event)">
+                            </li>
+                            <li class="glide__slide">
+                                <img id="2" src="assets/img/img3.png" alt="" class="overlay-section-img"
+                                    onclick="showDetails(event)">
+                            </li>
+
+                        </ul>
                     </div>
-                    <ul class="overlay-section-img-bullets padding-bottom-30px">
-                        <li id="0" class="product-bg-color-id-1 bullet-active"></li>
-                        <li id="1" class="product-bg-color-id-2"></li>
-                        <li id="2" class="product-bg-color-id-3"></li>
-                    </ul>
+
+                    <div class="glide__bullets padding-bottom-30px" data-glide-el="controls[nav]">
+                        <button class="glide__bullet product-bg-color-id-0" data-glide-dir="=0"></button>
+                        <button class="glide__bullet product-bg-color-id-1" data-glide-dir="=1"></button>
+                        <button class="glide__bullet product-bg-color-id-2" data-glide-dir="=2"></button>
+                    </div>
                 </div>
 
                 <div class="overlay-section-info">
                     <h2 class="overlay-section-info-title custom-font-semibold fs-23px">Nike Hyperfuel 709ml</h2>
-                    <h4 class="custom-font-medium fs-23px default-text-green-color">$24.99</h4>
-                    <p class="custom-font-regular fs-11px overlay-text-color">When you're carrying the Nike Hyperful
+                    <h4 class="overlay-section-info-price custom-font-medium fs-23px default-text-green-color">$24.99
+                    </h4>
+                    <p class="overlay-section-info-description custom-font-regular fs-11px overlay-text-color">When
+                        you're carrying the Nike Hyperful
                         Water Bottle there will be no ...</p>
                 </div>
 
@@ -128,59 +141,12 @@
 
 </body>
 
+<!-- custom -->
+<script src="assets/js/showDetails.js"></script>
+<!-- slider -->
+<script src="node_modules/@glidejs/glide/dist/glide.js"></script>
 <script>
-
-
-    const showDetails = event => {
-
-        const helper = (array, className, action) => {
-            
-            array.forEach(item => {
-
-                if(action === 'add') {
-                    item.classList.add(className);
-                } else {
-                    item.classList.remove(className);
-                }
-
-            });
-
-        }
-
-        // getting elements
-        const overlayContainer = document.querySelector('.overlay-section-wrapper');
-        const overlayContainerAnimation = overlayContainer.getAttribute('data-animation');
-
-        const header = document.querySelector('.overlay-section-header');
-        const id = event.target.getAttribute('id');
-        const imgs = document.querySelectorAll('.overlay-section-img');
-        const img = imgs[id];
-        const title = document.querySelector('.overlay-section-info-title');
-        const circleImg = document.querySelector('.overlay-section-img-bullets');
-        const detailsContainer = document.querySelector('.details-section');
-
-        if (overlayContainerAnimation === 'false') {
-            overlayContainer.setAttribute('data-animation', 'true');
-            overlayContainer.classList.add('overlay-section-wrapper-animation');
-            header.classList.add('overlay-section-header-animation');
-            img.classList.add('overlay-section-img-animation');
-            helper(imgs, 'overlay-section-img-animation-fix', 'add');
-            title.classList.add('overlay-section-info-title-animation');
-            circleImg.classList.add('overlay-section-img-bullets-animation');
-            detailsContainer.classList.add('details-section-animation');
-        } else {
-            overlayContainer.setAttribute('data-animation', 'false');
-            overlayContainer.classList.remove('overlay-section-wrapper-animation');
-            header.classList.remove('overlay-section-header-animation');
-            img.classList.remove('overlay-section-img-animation');
-            helper(imgs, 'overlay-section-img-animation-fix', 'remove');
-            title.classList.remove('overlay-section-info-title-animation');
-            circleImg.classList.remove('overlay-section-img-bullets-animation');
-            detailsContainer.classList.remove('details-section-animation');
-        }
-
-    }
-
+    new Glide('.glide').mount()
 </script>
 
 </html>
