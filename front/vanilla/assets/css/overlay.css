@@ -118,12 +118,28 @@
     height: 12%;
 }
 
+.overlay-section-img-animation-fix {
+    opacity: 0;
+    transition-duration: .05s !important;
+}
+
 .overlay-section-img-animation {
     position: absolute;
     z-index: 999;
-    transform: translate(-156px, -58%) scale(.125); 
+    transform: translate(-156px, -58%) scale(.125);
     transform-origin: center;
     opacity: 1 !important;
+    transition-duration: 1s !important;
+}
+
+@keyframes teste {
+    0% {
+        position: relative;
+    }
+    100% {
+        position: absolute;
+        z-index: 999;
+    }
 }
 
 .overlay-section-info-title-animation {
@@ -137,6 +153,6 @@
 }
 
 .overlay-section-header-animation {
-    transform: translateY(-100%);
+    transform: translateY(-150%);
 }
 

@@ -133,13 +133,28 @@
 
     const showDetails = event => {
 
+        const helper = (array, className, action) => {
+            
+            array.forEach(item => {
+
+                if(action === 'add') {
+                    item.classList.add(className);
+                } else {
+                    item.classList.remove(className);
+                }
+
+            });
+
+        }
+
         // getting elements
         const overlayContainer = document.querySelector('.overlay-section-wrapper');
         const overlayContainerAnimation = overlayContainer.getAttribute('data-animation');
 
         const header = document.querySelector('.overlay-section-header');
         const id = event.target.getAttribute('id');
-        const img = document.querySelectorAll('.overlay-section-img')[id];
+        const imgs = document.querySelectorAll('.overlay-section-img');
+        const img = imgs[id];
         const title = document.querySelector('.overlay-section-info-title');
         const circleImg = document.querySelector('.overlay-section-img-bullets');
         const detailsContainer = document.querySelector('.details-section');
@@ -149,6 +164,7 @@
             overlayContainer.classList.add('overlay-section-wrapper-animation');
             header.classList.add('overlay-section-header-animation');
             img.classList.add('overlay-section-img-animation');
+            helper(imgs, 'overlay-section-img-animation-fix', 'add');
             title.classList.add('overlay-section-info-title-animation');
             circleImg.classList.add('overlay-section-img-bullets-animation');
             detailsContainer.classList.add('details-section-animation');
@@ -157,6 +173,7 @@
             overlayContainer.classList.remove('overlay-section-wrapper-animation');
             header.classList.remove('overlay-section-header-animation');
             img.classList.remove('overlay-section-img-animation');
+            helper(imgs, 'overlay-section-img-animation-fix', 'remove');
             title.classList.remove('overlay-section-info-title-animation');
             circleImg.classList.remove('overlay-section-img-bullets-animation');
             detailsContainer.classList.remove('details-section-animation');
