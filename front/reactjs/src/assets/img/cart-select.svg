@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" viewBox="0 0 23 26">
+  <g id="Grupo_1789" data-name="Grupo 1789" transform="translate(-331 -56)">
+    <g id="shopping-bag" transform="translate(332 59)">
+      <path id="Caminho_860" data-name="Caminho 860" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#76848b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Linha_1" data-name="Linha 1" x2="18" transform="translate(3 6)" fill="none" stroke="#76848b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Caminho_861" data-name="Caminho 861" d="M16,10a4,4,0,0,1-8,0" fill="none" stroke="#76848b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <circle id="Elipse_55" data-name="Elipse 55" cx="2" cy="2" r="2" transform="translate(331 56)" fill="#ef3d55"/>
+  </g>
+</svg>

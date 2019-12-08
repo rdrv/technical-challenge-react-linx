@@ -1,13 +1,145 @@
-body {
+/* reset */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*::-webkit-scrollbar {
+  width: 0;
 }
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* main containers */
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cellphone {
+  width: 100%;
+  height: 100%;
+  max-width: 375px;
+  max-height: 812px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* main fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.custom-font-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400 !important;
+}
+
+.custom-font-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500 !important;
+}
+
+.custom-font-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600 !important;
+}
+
+.fs-23px {
+  font-size: 23px;
+}
+
+.fs-20px {
+  font-size: 20px;
+}
+
+.fs-14px {
+  font-size: 14px;
+}
+
+.fs-11px {
+  font-size: 11px;
+}
+
+/* main colors */
+
+.text-white-color {
+  color: #ffffff;
+}
+
+.bg-white-color {
+  background-color: #ffffff;
+}
+
+.main-bg-color {
+  background-color: #40596B;
+}
+
+.default-bg-green-color {
+  background-color: #29BE66;
+}
+
+.default-text-green-color {
+  color: #29BE66;
+}
+
+/* main margins and paddings */
+
+.default-padding {
+  padding: 10px;
+}
+
+.default-padding-right {
+  padding-right: 10px;
+}
+
+.default-padding-left-percent {
+  padding-left: 10%;
+}
+
+.default-padding-right-percent {
+  padding-right: 10%;
+}
+
+.padding-30px {
+  padding: 30px;
+}
+
+.padding-top-30px {
+  padding-top: 30px;
+}
+
+.padding-bottom-30px {
+  padding-bottom: 30px;
+}
+
+.padding-right-30px {
+  padding-right: 30px;
+}
+
+.padding-left-30px {
+  padding-left: 30px;
+}
+
+.default-margin {
+  margin: 10px;
+}
+
+
+
+
+
