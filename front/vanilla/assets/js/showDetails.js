@@ -24,8 +24,7 @@ const showDetails = event => {
     // getting elements
     const overlay = document.querySelector('.overlay-section-wrapper');
     const animationStatus = overlay.getAttribute('data-animation-status');
-    const id = event.target.getAttribute('id');
-    const img = document.querySelectorAll('.overlay-section-img')[id];
+    const img = event.target;
     const title = document.querySelector('.overlay-section-info-title');
     const detailsContainer = document.querySelector('.details-section');
 
